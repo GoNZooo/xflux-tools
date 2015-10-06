@@ -1,7 +1,7 @@
 #lang racket/base
 
 (require racket/cmdline
-         
+
          "mapzen-api/mapzen-search.rkt")
 
 (define country (make-parameter #f))
@@ -17,6 +17,6 @@
   (define location (get-commandline-options))
 
   (define r (mapzen-search->lat+long/city location))
-  
+
   (printf "lat\t~a~nlong\t~a~n"
           (car r) (cdr r)))
