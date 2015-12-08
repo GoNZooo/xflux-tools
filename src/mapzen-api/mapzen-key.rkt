@@ -12,7 +12,7 @@
 (define (key/loc-env-or-default)
   (call-with-input-file (or (getenv "MAPZEN_KEY_FILE")
                             (expand-user-path "~/.local/share/mapzen/key"))
-                        port->string))
+    port->string))
 
 (provide mapzen-api-key)
 (define (mapzen-api-key)
