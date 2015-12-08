@@ -8,10 +8,10 @@
 
 (define (get-commandline-options)
   (command-line
-    #:once-each
-    [("-c" "--country") c "Specify country to search in" (country c)]
-    #:args (location)
-    location))
+   #:once-each
+   [("-c" "--country") c "Specify country to search in" (country c)]
+   #:args (location)
+   location))
 
 (module+ main
   (define location (get-commandline-options))
